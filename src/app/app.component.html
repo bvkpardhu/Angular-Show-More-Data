@@ -1,0 +1,20 @@
+
+<div>
+    <h2>Hello {{name}}</h2>
+    <ul class="results-main-content">
+<li class="right-results-section">
+  <ul class="_result-list">
+    <li class="result" *ngFor="let x of content">
+      {{x.colorName}}
+    </li>
+  </ul>
+</li>
+<div *ngIf="findB; then thenBlock else elseBlock"></div>
+    <li>
+        <ng-template #thenBlock><input type="button" value="show more"  (click)="getData()"></ng-template>   
+        <ng-template #elseBlock><input type="button" value="show Less" (click)="getDataLess()"></ng-template>
+    </li>
+</ul>
+
+  </div>
+<router-outlet></router-outlet> 
